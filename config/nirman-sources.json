@@ -1,0 +1,261 @@
+{
+  "version": "2.0",
+  "engine": "NIRMAN_AI_GOVERNMENT",
+  "enabled": true,
+
+  "purpose": "Discover publicly available professional government contacts, departments, projects and procurement opportunities relevant to Nirman AI.",
+
+  "batch_size": 10,
+  "max_candidates_per_source": 20,
+
+  "source_policy": {
+    "official_domains_only": true,
+    "require_official_source_url": true,
+    "public_information_only": true,
+    "login_required_sources": false,
+    "guess_personal_email": false,
+    "generate_email_from_name": false,
+    "use_private_contact_information": false
+  },
+
+  "target_designations": {
+    "primary": [
+      "Chief Engineer",
+      "Superintending Engineer",
+      "Executive Engineer"
+    ],
+    "secondary": [
+      "Assistant Engineer",
+      "Project Director",
+      "Director",
+      "Procurement Officer",
+      "Tender Officer",
+      "Project Engineer",
+      "Nodal Officer"
+    ]
+  },
+
+  "departments": [
+    {
+      "id": "public_works",
+      "name": "Public Works Department",
+      "keywords": [
+        "PWD",
+        "Public Works Department",
+        "Public Works",
+        "Works Department"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "water_resources",
+      "name": "Water Resources",
+      "keywords": [
+        "Water Resources",
+        "Irrigation",
+        "River Development",
+        "Flood Control",
+        "Dam",
+        "Canal"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "urban_development",
+      "name": "Urban Development",
+      "keywords": [
+        "Urban Development",
+        "Urban Local Body",
+        "Municipal Corporation",
+        "Development Authority",
+        "Smart City"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "roads_highways",
+      "name": "Roads and Highways",
+      "keywords": [
+        "Road",
+        "Highways",
+        "National Highway",
+        "State Highway",
+        "NHAI",
+        "MoRTH"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "drinking_water",
+      "name": "Drinking Water and Sanitation",
+      "keywords": [
+        "Drinking Water",
+        "Water Supply",
+        "Sanitation",
+        "Jal Jeevan Mission",
+        "Water Supply Department"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "rural_development",
+      "name": "Rural Development",
+      "keywords": [
+        "Rural Development",
+        "Rural Works",
+        "Panchayati Raj",
+        "Rural Infrastructure"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "housing",
+      "name": "Housing and Infrastructure",
+      "keywords": [
+        "Housing",
+        "Housing Board",
+        "Infrastructure",
+        "Construction",
+        "Building"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "procurement",
+      "name": "Government Procurement",
+      "keywords": [
+        "Tender",
+        "Procurement",
+        "E-Tender",
+        "Bid",
+        "RFP",
+        "EOI"
+      ],
+      "priority": 1
+    }
+  ],
+
+  "central_sources": [
+    {
+      "name": "Central Public Works Department",
+      "domain": "cpwd.gov.in",
+      "url": "https://cpwd.gov.in/",
+      "source_type": "government_department",
+      "priority": 1
+    },
+    {
+      "name": "Ministry of Road Transport and Highways",
+      "domain": "morth.gov.in",
+      "url": "https://morth.gov.in/",
+      "source_type": "government_ministry",
+      "priority": 1
+    },
+    {
+      "name": "Ministry of Jal Shakti",
+      "domain": "jalshakti.gov.in",
+      "url": "https://www.jalshakti.gov.in/",
+      "source_type": "government_ministry",
+      "priority": 1
+    },
+    {
+      "name": "Department of Water Resources, River Development and Ganga Rejuvenation",
+      "domain": "jalshakti-dowr.gov.in",
+      "url": "https://www.jalshakti-dowr.gov.in/",
+      "source_type": "government_department",
+      "priority": 1
+    },
+    {
+      "name": "Department of Drinking Water and Sanitation",
+      "domain": "jalshakti-ddws.gov.in",
+      "url": "https://www.jalshakti-ddws.gov.in/",
+      "source_type": "government_department",
+      "priority": 1
+    }
+  ],
+
+  "national_portals": [
+    {
+      "name": "India Government Services Portal",
+      "domain": "india.gov.in",
+      "url": "https://www.india.gov.in/",
+      "source_type": "government_portal",
+      "priority": 2
+    },
+    {
+      "name": "Government e-Marketplace",
+      "domain": "gem.gov.in",
+      "url": "https://gem.gov.in/",
+      "source_type": "government_procurement",
+      "priority": 1
+    }
+  ],
+
+  "state_strategy": {
+    "enabled": true,
+    "mode": "official_state_domains",
+    "discover_state_departments": true,
+    "states": [
+      "Rajasthan",
+      "Uttar Pradesh",
+      "Bihar",
+      "Maharashtra",
+      "Gujarat",
+      "Haryana",
+      "Punjab",
+      "Madhya Pradesh",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana",
+      "Andhra Pradesh",
+      "West Bengal",
+      "Odisha",
+      "Jharkhand",
+      "Kerala",
+      "Himachal Pradesh"
+    ]
+  },
+
+  "project_keywords": [
+    "project",
+    "construction",
+    "infrastructure",
+    "building",
+    "warehouse",
+    "industrial",
+    "road",
+    "bridge",
+    "water supply",
+    "irrigation",
+    "sewerage",
+    "housing",
+    "hospital",
+    "school",
+    "government building"
+  ],
+
+  "procurement_keywords": [
+    "tender",
+    "e-tender",
+    "procurement",
+    "bid",
+    "RFP",
+    "EOI",
+    "NIT",
+    "work order",
+    "contract",
+    "quotation"
+  ],
+
+  "official_contact_priority": [
+    "official_department_email",
+    "official_designation_email",
+    "official_office_phone",
+    "official_contact_page"
+  ],
+
+  "output": {
+    "lead_type": "NIRMAN_GOVERNMENT",
+    "source": "scraper_hub_v2",
+    "source_verified": true
+  }
+}

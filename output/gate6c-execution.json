@@ -1,0 +1,1578 @@
+{
+  "gate": "6C",
+  "name": "AI COMPANY AGENT EXECUTION HARNESS",
+  "mode": "controlled_frozen_10_plus_10",
+  "production_writes": false,
+  "provider_calls": true,
+  "fixtures": [
+    {
+      "domain": "arspl",
+      "file": "/root/map-scraper-src/hub-v2/output/gate5-arspl-10.json",
+      "sha256": "ba3f39e0714d9b08ad5f043aeb5d4f5b3e500276d82ab907de901a05d0effb25",
+      "candidate_count": 10
+    },
+    {
+      "domain": "nirman",
+      "file": "/root/map-scraper-src/hub-v2/output/gate5-nirman-10.json",
+      "sha256": "c67ccb67e9c17eda9c7a8e83465749fe450c2f046c7e894023252c7684e80d72",
+      "candidate_count": 10
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "gateway_pass": 20,
+    "validation_pass": 20,
+    "failures": 0
+  },
+  "results": [
+    {
+      "index": 1,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-48a65351-ffcf-4145-a32a-0288d124f5ba",
+      "latency_ms": 1307,
+      "usage": {
+        "queue_time": 0.355919598,
+        "prompt_tokens": 643,
+        "prompt_time": 0.062638409,
+        "completion_tokens": 386,
+        "completion_time": 0.808377387,
+        "total_tokens": 1029,
+        "total_time": 0.871015796,
+        "completion_tokens_details": {
+          "reasoning_tokens": 305
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Classification field set to ARSPL_DISTRIBUTOR with confidence 0.85\",\"Source google_maps_puppeteer verified indicates prospect is a UPVC roofing sheet distributor in Patna, Bihar, India\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "999",
+        "remaining_tokens": "6908",
+        "reset_requests": "1m26.4s",
+        "reset_tokens": "8.19s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1307,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "999",
+            "remaining_tokens": "6908",
+            "reset_requests": "1m26.4s",
+            "reset_tokens": "8.19s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:27:47.967Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:27:47.967Z"
+    },
+    {
+      "index": 2,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-6ef8f74f-32be-4279-9f73-35cb77033cbf",
+      "latency_ms": 1075,
+      "usage": {
+        "queue_time": 0.316631679,
+        "prompt_tokens": 644,
+        "prompt_time": 0.029122249,
+        "completion_tokens": 330,
+        "completion_time": 0.695527729,
+        "total_tokens": 974,
+        "total_time": 0.724649978,
+        "completion_tokens_details": {
+          "reasoning_tokens": 244
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Prospect data classification field set to ARSPL_DISTRIBUTOR with confidence 0.85\",\"Source: google_maps_puppeteer (verified) indicates prospect is a UPVC roofing sheet distributor in Patna, Bihar, India\"],\"next_action\":\"research\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "998",
+        "remaining_tokens": "6944",
+        "reset_requests": "2m52.8s",
+        "reset_tokens": "7.92s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1075,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "998",
+            "remaining_tokens": "6944",
+            "reset_requests": "2m52.8s",
+            "reset_tokens": "7.92s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:28:19.071Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:28:19.071Z"
+    },
+    {
+      "index": 3,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-d8d05220-36cb-4bd6-b595-5f2bc00c9c51",
+      "latency_ms": 1061,
+      "usage": {
+        "queue_time": 0.423173989,
+        "prompt_tokens": 641,
+        "prompt_time": 0.027107568,
+        "completion_tokens": 282,
+        "completion_time": 0.583772387,
+        "total_tokens": 923,
+        "total_time": 0.610879955,
+        "completion_tokens_details": {
+          "reasoning_tokens": 200
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"source:google_maps_puppeteer (verified)\",\"prospect.classification field indicates ARSPL_DISTRIBUTOR with confidence 0.85\",\"lead_score:40 (low)\",\"lead_quality:LOW\"],\"next_action\":\"research\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "997",
+        "remaining_tokens": "7029",
+        "reset_requests": "4m19.2s",
+        "reset_tokens": "7.282s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1061,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "997",
+            "remaining_tokens": "7029",
+            "reset_requests": "4m19.2s",
+            "reset_tokens": "7.282s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:28:50.163Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:28:50.163Z"
+    },
+    {
+      "index": 4,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-71f6aebc-a4dd-4452-8016-78572764793c",
+      "latency_ms": 1080,
+      "usage": {
+        "queue_time": 0.316263503,
+        "prompt_tokens": 646,
+        "prompt_time": 0.035358226,
+        "completion_tokens": 329,
+        "completion_time": 0.690100855,
+        "total_tokens": 975,
+        "total_time": 0.725459081,
+        "completion_tokens_details": {
+          "reasoning_tokens": 241
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Prospect classification provided as ARSPL_DISTRIBUTOR with confidence 0.85\",\"Source: google_maps_puppeteer (verified) shows Northern India Steels querying UPVC roofing sheet dealer in Lucknow, Uttar Pradesh, India\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "996",
+        "remaining_tokens": "6827",
+        "reset_requests": "5m45.6s",
+        "reset_tokens": "8.797s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1080,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "996",
+            "remaining_tokens": "6827",
+            "reset_requests": "5m45.6s",
+            "reset_tokens": "8.797s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:29:21.248Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:29:21.248Z"
+    },
+    {
+      "index": 5,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-17e78ae8-bdec-437d-844a-ff3f7649bbcf",
+      "latency_ms": 969,
+      "usage": {
+        "queue_time": 0.211717526,
+        "prompt_tokens": 638,
+        "prompt_time": 0.030695883,
+        "completion_tokens": 327,
+        "completion_time": 0.697447554,
+        "total_tokens": 965,
+        "total_time": 0.728143437,
+        "completion_tokens_details": {
+          "reasoning_tokens": 241
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Prospect classification provided as ARSPL_DISTRIBUTOR with confidence 0.85\",\"Source: google_maps_puppeteer (verified) indicates prospect is a UPVC roofing sheet dealer in Lucknow, Uttar Pradesh, India\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "995",
+        "remaining_tokens": "7032",
+        "reset_requests": "7m12s",
+        "reset_tokens": "7.26s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 969,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "995",
+            "remaining_tokens": "7032",
+            "reset_requests": "7m12s",
+            "reset_tokens": "7.26s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:29:52.223Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:29:52.223Z"
+    },
+    {
+      "index": 6,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-bbc783ad-2adc-45c2-a566-33815353a1a6",
+      "latency_ms": 1283,
+      "usage": {
+        "queue_time": 0.431126905,
+        "prompt_tokens": 648,
+        "prompt_time": 0.179362441,
+        "completion_tokens": 313,
+        "completion_time": 0.647245532,
+        "total_tokens": 961,
+        "total_time": 0.826607973,
+        "completion_tokens_details": {
+          "reasoning_tokens": 219
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Source google_maps_puppeteer (verified) lists APOLLO STEEL PRODUCTS INDUSTRIES as a UPVC roofing sheet dealer in Lucknow, Uttar Pradesh, India and provides a pre‑assigned classification of ARSPL_DISTRIBUTOR with confidence 0.85\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "994",
+        "remaining_tokens": "6966",
+        "reset_requests": "8m38.4s",
+        "reset_tokens": "7.755s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1283,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "994",
+            "remaining_tokens": "6966",
+            "reset_requests": "8m38.4s",
+            "reset_tokens": "7.755s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:30:23.537Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:30:23.537Z"
+    },
+    {
+      "index": 7,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-f2386c98-62e5-459f-b84a-ec96e313ac6f",
+      "latency_ms": 1223,
+      "usage": {
+        "queue_time": 0.344803197,
+        "prompt_tokens": 651,
+        "prompt_time": 0.036667252,
+        "completion_tokens": 384,
+        "completion_time": 0.815830992,
+        "total_tokens": 1035,
+        "total_time": 0.852498244,
+        "completion_tokens_details": {
+          "reasoning_tokens": 302
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Classification field set to ARSPL_DISTRIBUTOR with confidence 0.85; source google_maps_puppeteer verified; prospect listed as UPVC roofing sheet dealer in Lucknow, Uttar Pradesh, India.\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "993",
+        "remaining_tokens": "7020",
+        "reset_requests": "10m4.8s",
+        "reset_tokens": "7.35s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1223,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "993",
+            "remaining_tokens": "7020",
+            "reset_requests": "10m4.8s",
+            "reset_tokens": "7.35s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:30:54.792Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:30:54.792Z"
+    },
+    {
+      "index": 8,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-49b9a744-5e1a-4546-8005-2b959b532db7",
+      "latency_ms": 1121,
+      "usage": {
+        "queue_time": 0.415291283,
+        "prompt_tokens": 636,
+        "prompt_time": 0.020825464,
+        "completion_tokens": 323,
+        "completion_time": 0.662955026,
+        "total_tokens": 959,
+        "total_time": 0.68378049,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 253
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_DISTRIBUTOR\",\"confidence\":0.85,\"evidence\":[\"Classification provided with confidence 0.85 in prospect data\",\"Source verified as google_maps_puppeteer\",\"Query indicates interest in UPVC roofing sheet dealer\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "992",
+        "remaining_tokens": "6978",
+        "reset_requests": "11m31.2s",
+        "reset_tokens": "7.665s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1121,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "992",
+            "remaining_tokens": "6978",
+            "reset_requests": "11m31.2s",
+            "reset_tokens": "7.665s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:31:25.945Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:31:25.945Z"
+    },
+    {
+      "index": 9,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-8be788ff-a07e-45d6-b3ec-ab8d15cc2686",
+      "latency_ms": 1313,
+      "usage": {
+        "queue_time": 0.424610751,
+        "prompt_tokens": 644,
+        "prompt_time": 0.025497799,
+        "completion_tokens": 400,
+        "completion_time": 0.832326596,
+        "total_tokens": 1044,
+        "total_time": 0.857824395,
+        "completion_tokens_details": {
+          "reasoning_tokens": 330
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_ROOFING\",\"confidence\":0.85,\"evidence\":[\"Prospect classification field set to ARSPL_ROOFING with confidence 0.85\",\"Source verified as google_maps_puppeteer (source_verified:true)\"],\"next_action\":\"research\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "991",
+        "remaining_tokens": "6972",
+        "reset_requests": "12m57.599s",
+        "reset_tokens": "7.71s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1313,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "991",
+            "remaining_tokens": "6972",
+            "reset_requests": "12m57.599s",
+            "reset_tokens": "7.71s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:31:57.259Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:31:57.259Z"
+    },
+    {
+      "index": 10,
+      "domain": "arspl",
+      "role_id": "ARSPL_SALES_HEAD",
+      "agent": "arspl-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-ad279cac-051c-47da-800a-19c244937198",
+      "latency_ms": 866,
+      "usage": {
+        "queue_time": 0.213536352,
+        "prompt_tokens": 643,
+        "prompt_time": 0.027552687,
+        "completion_tokens": 287,
+        "completion_time": 0.601531217,
+        "total_tokens": 930,
+        "total_time": 0.629083904,
+        "completion_tokens_details": {
+          "reasoning_tokens": 203
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"ARSPL_ROOFING\",\"confidence\":0.85,\"evidence\":[\"Prospect classification field set to \\\"ARSPL_ROOFING\\\" with confidence 0.85\",\"Lead score is 20 and lead quality marked as LOW, indicating early stage\",\"Query indicates interest in UPVC roofing sheet manufacturing\"],\"next_action\":\"qualify\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "990",
+        "remaining_tokens": "7027",
+        "reset_requests": "14m24s",
+        "reset_tokens": "7.297s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 866,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "990",
+            "remaining_tokens": "7027",
+            "reset_requests": "14m24s",
+            "reset_tokens": "7.297s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:32:28.134Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:32:28.134Z"
+    },
+    {
+      "index": 1,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-b0edf5c9-b980-428e-a0c5-0cc22e5cbd22",
+      "latency_ms": 1098,
+      "usage": {
+        "queue_time": 0.424129463,
+        "prompt_tokens": 705,
+        "prompt_time": 0.027699444,
+        "completion_tokens": 295,
+        "completion_time": 0.612316572,
+        "total_tokens": 1000,
+        "total_time": 0.640016016,
+        "completion_tokens_details": {
+          "reasoning_tokens": 220
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"designation:Chief Engineer\",\"department:Road Construction Department\",\"organization_type:GOVERNMENT_DEPARTMENT\",\"product_interest:UPVC_ROOFING_SHEETS\",\"source_verified:true\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "989",
+        "remaining_tokens": "6965",
+        "reset_requests": "15m50.4s",
+        "reset_tokens": "7.762s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1098,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "989",
+            "remaining_tokens": "6965",
+            "reset_requests": "15m50.4s",
+            "reset_tokens": "7.762s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:32:59.263Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:32:59.263Z"
+    },
+    {
+      "index": 2,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-6419f33a-4bb0-4efd-aea7-91a8fc228c0e",
+      "latency_ms": 976,
+      "usage": {
+        "queue_time": 0.318255609,
+        "prompt_tokens": 705,
+        "prompt_time": 0.03111335,
+        "completion_tokens": 290,
+        "completion_time": 0.604521369,
+        "total_tokens": 995,
+        "total_time": 0.635634719,
+        "completion_tokens_details": {
+          "reasoning_tokens": 215
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"designation:Chief Engineer\",\"department:Road Construction Department\",\"organization_type:GOVERNMENT_DEPARTMENT\",\"product_interest:UPVC_ROOFING_SHEETS\",\"source_verified:true\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "988",
+        "remaining_tokens": "6895",
+        "reset_requests": "17m16.8s",
+        "reset_tokens": "8.287s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 976,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "988",
+            "remaining_tokens": "6895",
+            "reset_requests": "17m16.8s",
+            "reset_tokens": "8.287s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:33:30.270Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:33:30.270Z"
+    },
+    {
+      "index": 3,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-fd6c8810-7a4a-4dc0-964f-d4c957ab8fd8",
+      "latency_ms": 1013,
+      "usage": {
+        "queue_time": 0.212515504,
+        "prompt_tokens": 705,
+        "prompt_time": 0.029896704,
+        "completion_tokens": 356,
+        "completion_time": 0.745713449,
+        "total_tokens": 1061,
+        "total_time": 0.775610153,
+        "completion_tokens_details": {
+          "reasoning_tokens": 279
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"designation field is Chief Engineer\",\"department field is Road Construction Department\",\"organization_type is GOVERNMENT_DEPARTMENT\",\"product_interest is UPVC_ROOFING_SHEETS\",\"source_verified is true\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "987",
+        "remaining_tokens": "6909",
+        "reset_requests": "18m43.2s",
+        "reset_tokens": "8.182s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1013,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "987",
+            "remaining_tokens": "6909",
+            "reset_requests": "18m43.2s",
+            "reset_tokens": "8.182s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:34:01.290Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:34:01.290Z"
+    },
+    {
+      "index": 4,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-65b44da1-a052-477b-9d2f-099817e553b1",
+      "latency_ms": 1238,
+      "usage": {
+        "queue_time": 0.425195835,
+        "prompt_tokens": 705,
+        "prompt_time": 0.036783855,
+        "completion_tokens": 308,
+        "completion_time": 0.637821523,
+        "total_tokens": 1013,
+        "total_time": 0.674605378,
+        "completion_tokens_details": {
+          "reasoning_tokens": 214
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"designation is Chief Engineer\",\"department is Road Construction Department\",\"organization_type is GOVERNMENT_DEPARTMENT\",\"lead_type is NIRMAN_GOVERNMENT\",\"product_interest is UPVC_ROOFING_SHEETS\",\"source_verified is true\",\"official_source_url confirms public department page\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "986",
+        "remaining_tokens": "6895",
+        "reset_requests": "20m9.6s",
+        "reset_tokens": "8.287s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1238,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "986",
+            "remaining_tokens": "6895",
+            "reset_requests": "20m9.6s",
+            "reset_tokens": "8.287s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:34:32.560Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:34:32.560Z"
+    },
+    {
+      "index": 5,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-277bbc3a-8358-4063-bf7e-5ec6ff988b70",
+      "latency_ms": 1293,
+      "usage": {
+        "queue_time": 0.34306065,
+        "prompt_tokens": 706,
+        "prompt_time": 0.033432568,
+        "completion_tokens": 415,
+        "completion_time": 0.874943715,
+        "total_tokens": 1121,
+        "total_time": 0.908376283,
+        "completion_tokens_details": {
+          "reasoning_tokens": 318
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"Company name is Building Construction Department (government department)\",\"Designation is Chief Engineer\",\"Organization type is GOVERNMENT_DEPARTMENT\",\"Product interest is UPVC_ROOFING_SHEETS\",\"Source is verified (nirman_government_contact)\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[\"non_official_contact_email\",\"requires_contact_verification\"]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "985",
+        "remaining_tokens": "6908",
+        "reset_requests": "21m36s",
+        "reset_tokens": "8.19s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1293,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "985",
+            "remaining_tokens": "6908",
+            "reset_requests": "21m36s",
+            "reset_tokens": "8.19s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:35:03.860Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:35:03.860Z"
+    },
+    {
+      "index": 6,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-abb7d560-c8cf-439c-9c67-6700a7f1575a",
+      "latency_ms": 1243,
+      "usage": {
+        "queue_time": 0.347701069,
+        "prompt_tokens": 710,
+        "prompt_time": 0.028383169,
+        "completion_tokens": 400,
+        "completion_time": 0.839788021,
+        "total_tokens": 1110,
+        "total_time": 0.86817119,
+        "completion_tokens_details": {
+          "reasoning_tokens": 278
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\n  \"classification\": \"NIRMAN_ENGINEER\",\n  \"confidence\": 0.95,\n  \"evidence\": [\n    \"organization_type is GOVERNMENT_DEPARTMENT\",\n    \"designation is Chief Engineer\",\n    \"lead_type is NIRMAN_GOVERNMENT\",\n    \"product_interest is UPVC_ROOFING_SHEETS\",\n    \"source_verified is true\"\n  ],\n  \"next_action\": \"prepare_outreach\",\n  \"policy_flags\": [\n    \"email_not_official\",\n    \"needs_contact_verification\"\n  ]\n}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "984",
+        "remaining_tokens": "6960",
+        "reset_requests": "23m2.4s",
+        "reset_tokens": "7.8s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1243,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "984",
+            "remaining_tokens": "6960",
+            "reset_requests": "23m2.4s",
+            "reset_tokens": "7.8s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:35:35.136Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:35:35.136Z"
+    },
+    {
+      "index": 7,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-82cf40d2-36ce-4c64-962d-fc652333f16c",
+      "latency_ms": 1466,
+      "usage": {
+        "queue_time": 0.349218422,
+        "prompt_tokens": 712,
+        "prompt_time": 0.037174098,
+        "completion_tokens": 497,
+        "completion_time": 1.052154697,
+        "total_tokens": 1209,
+        "total_time": 1.089328795,
+        "completion_tokens_details": {
+          "reasoning_tokens": 406
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_ENGINEER\",\"confidence\":0.95,\"evidence\":[\"designation is Chief Engineer\",\"department is Building Construction Department\",\"organization_type is GOVERNMENT_DEPARTMENT\",\"lead_type is NIRMAN_GOVERNMENT\",\"product_interest is UPVC_ROOFING_SHEETS\",\"source_verified is true\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[\"email_not_official\"]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "983",
+        "remaining_tokens": "6888",
+        "reset_requests": "24m28.8s",
+        "reset_tokens": "8.34s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1466,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "983",
+            "remaining_tokens": "6888",
+            "reset_requests": "24m28.8s",
+            "reset_tokens": "8.34s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:36:06.607Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:36:06.607Z"
+    },
+    {
+      "index": 8,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-dbeefdeb-346d-4c8f-a2fa-63d7f53da73b",
+      "latency_ms": 1214,
+      "usage": {
+        "queue_time": 0.318325674,
+        "prompt_tokens": 714,
+        "prompt_time": 0.021754224,
+        "completion_tokens": 318,
+        "completion_time": 0.844645433,
+        "total_tokens": 1032,
+        "total_time": 0.866399657,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 219
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\n  \"classification\": \"NIRMAN_GOVERNMENT\",\n  \"confidence\": 0.8,\n  \"evidence\": [\n    \"organization_type is GOVERNMENT_DEPARTMENT\",\n    \"lead_type is NIRMAN_GOVERNMENT\",\n    \"designation is Engineer-in-Chief within Water Resources Department\",\n    \"source_verified is true\"\n  ],\n  \"next_action\": \"prepare_outreach\",\n  \"policy_flags\": []\n}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "982",
+        "remaining_tokens": "6886",
+        "reset_requests": "25m55.199s",
+        "reset_tokens": "8.355s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1214,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "982",
+            "remaining_tokens": "6886",
+            "reset_requests": "25m55.199s",
+            "reset_tokens": "8.355s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:36:37.847Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:36:37.847Z"
+    },
+    {
+      "index": 9,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-4feefb57-9167-4d28-a27d-6f31f0ad6a78",
+      "latency_ms": 1146,
+      "usage": {
+        "queue_time": 0.318061905,
+        "prompt_tokens": 717,
+        "prompt_time": 0.029568515,
+        "completion_tokens": 368,
+        "completion_time": 0.7680269,
+        "total_tokens": 1085,
+        "total_time": 0.797595415,
+        "completion_tokens_details": {
+          "reasoning_tokens": 278
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_GOVERNMENT\",\"confidence\":0.8,\"evidence\":[\"source_verified:true\",\"organization_type:GOVERNMENT_DEPARTMENT\",\"designation:Engineer-in-Chief\",\"official_source_url:https://state.bihar.gov.in/wrd/CitizenHome.html\",\"product_interest:UPVC_ROOFING_SHEETS\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "981",
+        "remaining_tokens": "6786",
+        "reset_requests": "27m21.6s",
+        "reset_tokens": "9.105s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1146,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "981",
+            "remaining_tokens": "6786",
+            "reset_requests": "27m21.6s",
+            "reset_tokens": "9.105s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:37:09.024Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:37:09.024Z"
+    },
+    {
+      "index": 10,
+      "domain": "nirman",
+      "role_id": "NIRMAN_SALES_HEAD",
+      "agent": "nirman-sales-head",
+      "task": "classify_prospect",
+      "expected_provider": "groq",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "request_id": "chatcmpl-cd003e81-cb7e-4854-9bd4-a3aa877dc85e",
+      "latency_ms": 1648,
+      "usage": {
+        "queue_time": 0.318404168,
+        "prompt_tokens": 716,
+        "prompt_time": 0.029740632,
+        "completion_tokens": 609,
+        "completion_time": 1.276229559,
+        "total_tokens": 1325,
+        "total_time": 1.3059701910000001,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      "cost": 0,
+      "gateway_ok": true,
+      "validation": {
+        "pass": true,
+        "checks": {
+          "gateway_ok": true,
+          "provider_present": true,
+          "model_present": true,
+          "request_id_present": true,
+          "latency_present": true,
+          "result_present": true
+        }
+      },
+      "ai_result": "{\"classification\":\"NIRMAN_GOVERNMENT\",\"confidence\":0.8,\"evidence\":[\"source_verified:true from nirman_government_contact\",\"official_source_url https://state.bihar.gov.in/wrd/CitizenHome.html confirms government department\",\"designation Engineer-in-Chief\",\"organization_type GOVERNMENT_DEPARTMENT\",\"lead_score 90 and lead_quality HIGH\"],\"next_action\":\"prepare_outreach\",\"policy_flags\":[]}",
+      "error": null,
+      "rate_limit": {
+        "remaining_requests": "980",
+        "remaining_tokens": "6787",
+        "reset_requests": "28m48s",
+        "reset_tokens": "9.097s",
+        "retry_after": null
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 1648,
+          "ok": true,
+          "error_code": null,
+          "error_message": null,
+          "rate_limit": {
+            "remaining_requests": "980",
+            "remaining_tokens": "6787",
+            "reset_requests": "28m48s",
+            "reset_tokens": "9.097s",
+            "retry_after": null
+          },
+          "timestamp": "2026-09-13T04:37:40.695Z"
+        }
+      ],
+      "policy": {
+        "production_write": false,
+        "email_send": false,
+        "whatsapp_send": false,
+        "android_send": false,
+        "sheets_write": false,
+        "supabase_write": false
+      },
+      "contract": {
+        "authority_level": "prepare",
+        "preferred_provider": "groq",
+        "fallback_provider": "ollama"
+      },
+      "timestamp": "2026-09-13T04:37:40.695Z"
+    }
+  ]
+}

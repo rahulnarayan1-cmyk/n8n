@@ -1,0 +1,198 @@
+{
+  "version": "2.0",
+  "engine": "ARSPL_ROOFING",
+  "enabled": true,
+
+  "purpose": "Discover commercially relevant roofing, industrial construction and building-material prospects for ARSPL uPVC/PVC roofing sheets.",
+
+  "batch_size": 10,
+  "max_candidates_per_query": 20,
+
+  "search_strategy": {
+    "mode": "category_x_geography",
+    "dedupe_queries": true,
+    "require_business_relevance": true
+  },
+
+  "priority_categories": [
+    {
+      "id": "roofing_sheet_distributor",
+      "priority": 1,
+      "queries": [
+        "uPVC roofing sheet dealer",
+        "PVC roofing sheet supplier",
+        "roofing sheet distributor",
+        "roofing sheet dealer",
+        "roofing materials distributor"
+      ],
+      "organization_type": "distributor",
+      "product_interest": "uPVC/PVC roofing sheets"
+    },
+    {
+      "id": "roofing_contractor",
+      "priority": 1,
+      "queries": [
+        "roofing contractor",
+        "industrial roofing contractor",
+        "roofing installation contractor",
+        "metal roofing contractor",
+        "factory roofing contractor"
+      ],
+      "organization_type": "contractor",
+      "product_interest": "roofing sheets"
+    },
+    {
+      "id": "industrial_shed_peb",
+      "priority": 1,
+      "queries": [
+        "PEB contractor",
+        "pre engineered building contractor",
+        "industrial shed contractor",
+        "industrial roofing contractor",
+        "warehouse shed contractor"
+      ],
+      "organization_type": "industrial_contractor",
+      "product_interest": "industrial roofing sheets"
+    },
+    {
+      "id": "building_material",
+      "priority": 2,
+      "queries": [
+        "building material distributor",
+        "building material supplier",
+        "construction material dealer",
+        "construction material distributor"
+      ],
+      "organization_type": "building_material_supplier",
+      "product_interest": "roofing/building materials"
+    },
+    {
+      "id": "industrial_construction",
+      "priority": 2,
+      "queries": [
+        "industrial construction company",
+        "industrial project contractor",
+        "factory construction contractor",
+        "warehouse construction contractor"
+      ],
+      "organization_type": "industrial_contractor",
+      "product_interest": "industrial roofing"
+    },
+    {
+      "id": "architect",
+      "priority": 2,
+      "queries": [
+        "architect industrial building",
+        "industrial architect",
+        "warehouse architect",
+        "PEB architect",
+        "factory architect"
+      ],
+      "organization_type": "architect",
+      "product_interest": "roofing specification"
+    },
+    {
+      "id": "industrial_end_user",
+      "priority": 3,
+      "queries": [
+        "factory",
+        "manufacturing plant",
+        "industrial warehouse",
+        "logistics warehouse",
+        "industrial facility"
+      ],
+      "organization_type": "factory_or_warehouse",
+      "product_interest": "industrial roofing"
+    },
+    {
+      "id": "importer",
+      "priority": 3,
+      "queries": [
+        "roofing sheet importer",
+        "building material importer",
+        "roofing materials importer",
+        "PVC roofing sheet importer"
+      ],
+      "organization_type": "importer",
+      "product_interest": "uPVC/PVC roofing sheets"
+    }
+  ],
+
+  "geographies": {
+    "india": {
+      "enabled": true,
+      "priority": 1,
+      "states": [
+        "Maharashtra",
+        "Gujarat",
+        "Rajasthan",
+        "Delhi NCR",
+        "Haryana",
+        "Punjab",
+        "Uttar Pradesh",
+        "Madhya Pradesh",
+        "Karnataka",
+        "Tamil Nadu",
+        "Telangana",
+        "Andhra Pradesh",
+        "West Bengal",
+        "Bihar",
+        "Odisha",
+        "Jharkhand",
+        "Kerala"
+      ]
+    },
+
+    "gcc": {
+      "enabled": true,
+      "priority": 2,
+      "countries": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar",
+        "Oman",
+        "Kuwait",
+        "Bahrain"
+      ]
+    },
+
+    "international": {
+      "enabled": true,
+      "priority": 3,
+      "countries": [
+        "United Kingdom",
+        "Canada",
+        "United States",
+        "South Africa",
+        "Nigeria"
+      ]
+    }
+  },
+
+  "contact_priority": [
+    "business_email",
+    "website",
+    "phone",
+    "whatsapp"
+  ],
+
+  "allowed_email_types": [
+    "business",
+    "role"
+  ],
+
+  "reject_only": [
+    "obvious_junk",
+    "placeholder",
+    "invalid_format",
+    "image_asset_domain",
+    "tracking_domain",
+    "social_media_only"
+  ],
+
+  "output": {
+    "lead_type": "ARSPL_ROOFING",
+    "source": "scraper_hub_v2",
+    "source_verified": false
+  }
+}

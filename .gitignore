@@ -1,0 +1,39 @@
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Logs / runtime
+*.log
+*.pid
+*.runtime.json
+
+# Local backup snapshots
+*.before-*
+*.backup-*
+*.bak
+
+# Temporary/local artifacts
+/tmp/
+.DS_Store
+
+# Generated discovery/runtime outputs
+output/arspl-live-*.json
+output/nirman-live-*.json
+output/gate5-ai-*.json
+output/gate5-groq-*.json
+output/gate5-kilo-*.json
+output/gate5-nemotron-*.json
+output/gate5-nemotron-ultra-*.json
+output/json-writer.js.before-*
+
+# Keep controlled frozen validation evidence explicitly
+!output/gate5-arspl-10.json
+!output/gate5-nirman-10.json
+!output/gate6c-execution.json
+
+# Empty/local placeholder
+scp
